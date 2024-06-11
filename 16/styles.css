@@ -1,6 +1,10 @@
 * {
-    margin: 0;
+    margin: 0 auto;
     box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(196, 164, 86);    
 }
 
 img {
