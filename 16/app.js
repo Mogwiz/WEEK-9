@@ -24,15 +24,19 @@ const msg = document.getElementById("msg");
 const search = (e) =>{
     e.preventDefault();
     let inputValue = document.getElementById("search").value;
-    if (!inputValue){
-        msg.innerText = "Invalid item";
-    } else {
-        msg.innerText = `These are the results for "${inputValue}"`;
-    }
 
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputValue}`)
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data =>{
+        const mealList = document.getElementById("mealList")
+        mealList.innerHTML = ""
+        if(data.meals == null){
+            msg.innerText = `No result found for "${inputValue}"`
+            } else {
+                msg.innerText = `These are the results for "${inputValue}"`
+                console.log(data.meals)
+            }
+    })
 }
 
 form.addEventListener("submit", search);
