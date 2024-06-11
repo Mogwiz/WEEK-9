@@ -1,8 +1,8 @@
 const rainbow = (color) => {
   return new Promise((resolve, reject) =>{
-    document.body.style.backgroundColor = color;
     setTimeout(() =>{
-      resolve(color);
+      document.body.style.backgroundColor = color;
+      resolve();
     }, 1000)
   })
 }
