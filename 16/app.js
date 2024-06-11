@@ -16,3 +16,14 @@ const rainbow = async () => {
 }
 
 rainbow();
+
+
+const form = document.getElementById("form");
+
+const search = (e) =>{
+    e.preventDefault();
+    let inputValue = document.getElementById("search").value;
+    console.log(inputValue);
+}
+
+form.addEventListener("submit", search);

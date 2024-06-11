@@ -4,7 +4,8 @@
 }
 
 body {
-    background-color: rgb(196, 164, 86);    
+    background-color: rgb(196, 164, 86);
+    font-family: "Noto Sans Symbols", sans-serif;
 }
 
 img {
@@ -24,22 +25,47 @@ h1 {
     font-weight: 400;
     margin-top: 50px;
     margin-bottom: 75px;
-    font-size: 32px;
+    font-size: 48px;
+    width: 230px;
+    cursor: pointer;
     transition : color 1s ease;
-}
-
-h1:hover {
-    font-size: 36px;
 }
 
 form {
     margin-bottom: 15px;
 }
 
+form input, form button {
+    border-radius: 25px;
+    border: none;
+    height: 40px;
+}
+
+form input {
+    width: 400px;
+}
+
+form input::placeholder {
+    text-align: center;
+}
+
+form button {
+    width: 50px;
+    cursor: pointer;
+}
+
 button img {
     width: 10px;
 }
 
+#msg {
+    font-size: 24px;
+}
+
 hr {
-    margin-top: 30px;
+    height: 10px;
+    background-color: black;
+    border: none;
+    border-radius: 25px;
+    margin-top: 20px;
 }
